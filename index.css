@@ -1,0 +1,65 @@
+:root {
+  /* Design System - Earth Tones */
+  --earth-50: #fdfcfa;
+  --earth-100: #f7f5f0;
+  --earth-200: #e8e2d2;
+  --earth-300: #d5cbb0;
+  --earth-400: #bead8a;
+  --earth-500: #a8926a;
+  --earth-600: #957d59;
+  --earth-700: #735f44;
+  --earth-800: #5e4e3b;
+  --earth-900: #4e4133;
+  --earth-950: #1a1612;
+
+  /* Design System - Nature Tones */
+  --nature-50: #f0fdf4;
+  --nature-100: #dcfce7;
+  --nature-200: #bbf7d0;
+  --nature-500: #22c55e;
+  --nature-800: #166534;
+  --nature-900: #14532d;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-earth-50 text-earth-900 font-sans antialiased selection:bg-nature-200 selection:text-nature-900;
+  }
+}
+
+@layer components {
+  /* Abstração de Componentes para Produção */
+  .btn-primary {
+    @apply px-8 py-4 bg-gray-900/30 hover:bg-gray-900/10 backdrop-blur-md border border-white/10 hover:border-white text-white text-lg font-semibold rounded-xl transition-all duration-300 shadow-lg inline-flex items-center justify-center;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white text-lg font-semibold rounded-xl transition-all duration-300 inline-flex items-center justify-center;
+  }
+
+  .card-glass {
+    @apply bg-white/60 backdrop-blur-sm rounded-3xl border border-earth-100 shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .tag-label {
+    @apply inline-block px-3 py-1 bg-earth-200 text-earth-800 rounded-full text-[10px] font-bold tracking-widest uppercase;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pousada Barcelos | Serra da Canastra</title>
+
+    <!-- 1. Estilos Customizados -->
+    
+    <!-- 2. Import Map -->
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+
+    <!-- 3. Babel Standalone (Para processamento de .tsx no navegador) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script>
+      window.process = { env: { NODE_ENV: 'production' } };
+    </script>
+
+    <!-- 4. Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              earth: {
+                50: '#fdfcfa', 100: '#f7f5f0', 200: '#e8e2d2', 300: '#d5cbb0', 
+                400: '#bead8a', 500: '#a8926a', 600: '#957d59', 700: '#735f44', 
+                800: '#5e4e3b', 900: '#4e4133', 950: '#1a1612'
+              },
+              nature: {
+                50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 500: '#22c55e', 
+                800: '#166534', 900: '#14532d'
+              }
+            },
+            fontFamily: {
+              serif: ['Cinzel', 'serif'],
+              sans: ['Lato', 'sans-serif'],
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- 5. Fontes de Produção -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-earth-50 text-earth-900 overflow-x-hidden">
+    <div id="root"></div>
+    
+    <script 
+      type="text/babel" 
+      data-type="module" 
+      data-presets="typescript,react" 
+      src="/index.tsx">
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
