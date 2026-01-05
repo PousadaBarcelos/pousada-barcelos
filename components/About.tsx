@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { MapPin, Sparkles, Coffee } from 'lucide-react';
 import { ABOUT_GALLERY } from '../constants';
 
@@ -7,6 +7,20 @@ interface AboutProps {
 }
 
 const About: React.FC<AboutProps> = ({ t }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    // Garante que o carrossel só funcione se houver mais de uma imagem
+    if (ABOUT_GALLERY.length > 1) {
+      const timer = setInterval(() => {
+        setCurrentImageIndex(prevIndex => (prevIndex + 1) % ABOUT_GALLERY.length);
+      }, 3000); // Altera a imagem a cada 3 segundos
+
+      // Limpa o intervalo quando o componente é desmontado para evitar vazamentos de memória
+      return () => clearInterval(timer);
+    }
+  }, [ABOUT_GALLERY.length]);
+
   return (
     <section id="about" className="py-20 bg-earth-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,19 +34,19 @@ const About: React.FC<AboutProps> = ({ t }) => {
             </h2>
         </div>
 
-        {/* Galeria de Imagens Compacta */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
-            {ABOUT_GALLERY.map((url, idx) => (
-              <img 
-                key={idx} 
-                src={url} 
-                alt={`Imagem Galeria ${idx + 1}`} 
-                className="rounded-2xl shadow-sm w-full h-40 object-cover hover:scale-[1.02] transition-transform duration-500" 
-              />
-            ))}
+        {/* Carrossel de Imagens com Fade */}
+        <div className="relative h-64 md:h-80 rounded-2xl shadow-sm w-full overflow-hidden mb-10">
+          {ABOUT_GALLERY.map((url, idx) => (
+            <img 
+              key={idx} 
+              src={url} 
+              alt={`Imagem Galeria ${idx + 1}`} 
+              className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${currentImageIndex === idx ? 'opacity-100' : 'opacity-0'}`} 
+            />
+          ))}
         </div>
 
-        {/* Blocos de Texto - Usando .card-glass */}
+        {/* Blocos de Texto */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             
             <div className="card-glass p-6 flex flex-col">

@@ -4,7 +4,7 @@ export const translations = {
     hero: {
       subtitle: 'Serra da Canastra - Minas Gerais',
       title: 'Pousada Barcelos',
-      description: 'A melhor opção antes e depois de visitar um dos parques mais belos do Brasil',
+      description: 'A melhor opção antes e depois de visitar a Serra da Canastra',
       btnRooms: 'Ver Acomodações',
       btnAbout: 'Conhecer a Pousada'
     },

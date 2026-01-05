@@ -43,13 +43,18 @@ export const FACEBOOK_LINK = "https://www.facebook.com/pousadabarcelos/?locale=p
 export const INSTAGRAM_LINK = "https://www.instagram.com/pousadabarcelos/";
 export const EMAIL_ADDRESS = "pousada@barcelos.tur.br";
 export const ADDRESS = "Av. Vicente Picardi, 189 - Bairro São Paulo, São Roque de Minas - MG";
-export const LOGO_URL = "https://lh3.googleusercontent.com/pw/AP1GczNa-hwv0Iiu6gKoJVmgSLFu4cXS0lUXJF8-TLVoVVaJn_GeTrN-rIb67wmrTmn8hMrvGon4QBlBxnbGSK5PwAufBKVHmAmYDcqeHQxQYB3R4T4MWCEWhsZrzivn_WqS86Ejlsk3WidhpfK8xd1-nck=w103-h150-s-no-gm?authuser=0";
+export const LOGO_URL = "https://lh3.googleusercontent.com/pw/AP1GczMNWMWwdpU9-EscorATkz8keZ70i0hNg-2L5Y523SInsiVc6pq1_RUwL3CwVj59b-H_i5yrTGo-01tQzD2rGAYqYDFmNrerAAwk1Jqh0ZCW1vIMbXZU2gysQkEaPIyu2bR_Z-LiaNV3DhltbrzD5baC=w48-h64-s-no-gm?authuser=0";
 
 export const HERO_BG_IMAGE = "https://lh3.googleusercontent.com/pw/AP1GczOKZCG1YCLbsNcKsZkfjt-T6HyDaTBLUYboC9CGeaPUonjM9QXX8_jiCFDE8T9xHzK5AS1CIunz3J-kghdElr2E_B78U68N-F49V9ue_fm4JbF3V3rcHyEs-HwdvvXalrg0bCebtAP9xeoGXbsrxG5y=w1390-h782-s-no-gm?authuser=0";
+
+export const HOME_CAROUSEL_IMAGES: string[] = [];
 
 export const ABOUT_GALLERY = [
   "https://lh3.googleusercontent.com/pw/AP1GczObZMG9z_ygWBS4ngAFGjUOkClgwJW7sxCI4A0w3vXEhynQr5UdY7m53GPkLHqCtYTIFjjO0TrGYNL3v5Y_g9LHKoEblLcUE5TtD6dYrIBD0v6ENdW6l7t9wW1sfPGVSp7C_K5rEEJ4h0NvJp29KDs_=w1592-h712-s-no-gm?authuser=0",
   "https://lh3.googleusercontent.com/pw/AP1GczMv0H8wzjD-wZ-DhnP-1RAgeAcq59-o1-Ve_jm8Va-YlKF3LmTFEOVD2d8mg4REB5XgTWW6FHFYcnsv5tqh4xYJ87DqlsX7g-fMvtUhF0mqPDr8GrwwXg9s4gAvYVs93UOPSowIMIcil4hbRLCxtbQ_=w1043-h782-s-no-gm?authuser=0",
+  "https://lh3.googleusercontent.com/pw/AP1GczOXDjHGOBkuB-wve8mRJ-n9Gkdb2JZ8jAXKa6EpOJNleYlKDvIvTJMQvPyzLupTlfQi_Ok5W5LmFhC0QwLtzRGPHA81hRNRbi065LuzSC4Zj7f8qe0GDJk9JV7v4-6F5_3TRuK7KGWb6Q1mUmL8UnVm=w1380-h776-s-no-gm?authuser=0",
+  "https://lh3.googleusercontent.com/pw/AP1GczNnuoMhPQ7MwOU4RQYGaFvR9_4PoiyYCBfvM08AXiQ6FajxAD4K2yFD1zF8CgErbfZU5GWrmEy-54UrYjQKypFOcyaDpwIce4fZTJxSiMrvy7uWP3Rf3NylnFf8MEilQlitZjS702q_ElrfDsNXFh-9=w1035-h776-s-no-gm?authuser=0",
+  "https://lh3.googleusercontent.com/pw/AP1GczPxk0H_oM7DopH_zYeB6mCXwlZiM_0EKtYT_gc3qfnh8soCRc7OeInMbs8zH5qfmDjLCYzJ8f4hHQ0fO5lGyXo-x531S0UFYkgdPTQ-M-GXlyEIBZ5UczMh56Ph0-QzsUrLCbXE-ZQYqL4u8m5g0FpQ=w1035-h776-s-no-gm?authuser=0",
   "https://lh3.googleusercontent.com/pw/AP1GczNNSDieebOP8D7qcEGqmQ_mXVnlHsR1XsQkHEussRmGuCFxEHRX6DN5xELSoLQHE0pwm6gvK3-amw7OXER5Q9gj-oDki-CgdbOGwQPB9vO2A6KAz3xhy2H3ZF681vlSjcMcqs4uG6kPnMiVCBXYIiFj=w1390-h782-s-no-gm?authuser=0",
   "https://lh3.googleusercontent.com/pw/AP1GczNsoLWgmmO6O8yfusMPwUP21AsBROwsbiP3Xf-sKV7YwOYS3rpL4Gteox_gNr8K8jIE1XHIybrvPWMKCmKqJyW00dt5YKbDy59BmB2DzLbi4cyOPM8R9PVpwNPwnTpO7RDb7K1YsgbXrlJORnWCYy8o=w1390-h782-s-no-gm?authuser=0"
 ];
@@ -121,27 +126,28 @@ export const AMENITIES: Amenity[] = [
     imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczN949Y5rVprv9BowlvGur_kuWBvCcZ9XjIOXovk-Z4IyWTZhK05mZB1e15dUTMqsB1B_3ziOBg87w-v1JABpCw5GjZaN6J0uJZ8QPE096miNwjoZEWl02NrZZcxxhcuZwfP6sBC1N3HfikMWHV7geej=w900-h647-s-no-gm?authuser=0',
     imageUrls: [
       'https://lh3.googleusercontent.com/pw/AP1GczN949Y5rVprv9BowlvGur_kuWBvCcZ9XjIOXovk-Z4IyWTZhK05mZB1e15dUTMqsB1B_3ziOBg87w-v1JABpCw5GjZaN6J0uJZ8QPE096miNwjoZEWl02NrZZcxxhcuZwfP6sBC1N3HfikMWHV7geej=w900-h647-s-no-gm?authuser=0',
-      'https://lh3.googleusercontent.com/pw/AP1GczMlB9e7qtT8GOh-EkHyXTJYIERmxWE9DwpXtjmsp12ecaqvgE3Lv9rL1B0SGAyRAcwfh2MF_mvHGFhrsWK8V0EaxTvX9UO1Emy9N85IcFInUlrd1u1cD0SkTXT5Gie320y9oD-R5cs7VWLqD13pPOot=w1043-h782-s-no-gm?authuser=0'
+      'https://lh3.googleusercontent.com/pw/AP1GczMlB9e7qtT8GOh-EkHyXTJYIERmxWE9DwpXtjmsp12ecaqvgE3Lv9rL1B0SGAyRAcwfh2MF_mvHGFhrsWK8V0EaxTvX9UO1Emy9N85IcFInUlrd1u1cD0SkTXT5Gie320y9oD-R5cs7VWLqD13pPOot=w1043-h782-s-no-gm?authuser=0',
+      'https://lh3.googleusercontent.com/pw/AP1GczOl5Oc8WoCoRD1usd7WIc8wgGmZgT2AImGr8MUHDLWrp2O_fY0p1dy9AtpSsw7hQcqpJNj3zX3IEV0_7008xaBK7XWrZ9imB2SHrL0gC8zsNbEPslXXyrEd28xFf4GuSIoROfnHZFx43mj2SU-IjlK9=w1035-h776-s-no-gm?authuser=0'
     ],
-    imageLabels: ['Parque Nacional', 'Nascente S.F.']
+    imageLabels: ['Parque Nacional', 'Nascente S.F.', 'Casca d Anta']
   },
   {
     id: 'cachoeiras',
     title: 'Cachoeiras',
-    description: 'Além da famosa Casca d\'Anta, descubra dezenas de quedas d\'água cristalinas.',
-    longDescription: 'Desde a imponente Casca d\'Anta com seus 186 metros até poços secretos de águas esmeraldas. Opções ideais para banho, fotografia e contemplação.',
+    description: 'Além da famosa Casca d Anta, descubra dezenas de quedas d água cristalinas.',
+    longDescription: 'Desde a imponente Casca d Anta com seus 186 metros até poços secretos de águas esmeraldas. Opções ideais para banho, fotografia e contemplação.',
     icon: WaterfallIcon,
     imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczNLfc3rl_eJKconiwUflFBYYlHAEv5eWsKO7F15EOufSx-iSd5xg8ug-5it3BtfX2lCOV4gEgS4FqbDuwGP54u0VWmzuAKXnAusyYK6-WlCJL9XoMZtLzjnwt635VgLeXSDvMI2dX0keQe-nJi0Iuey=w1043-h782-s-no-gm?authuser=0',
     imageUrls: [
       'https://lh3.googleusercontent.com/pw/AP1GczNLfc3rl_eJKconiwUflFBYYlHAEv5eWsKO7F15EOufSx-iSd5xg8ug-5it3BtfX2lCOV4gEgS4FqbDuwGP54u0VWmzuAKXnAusyYK6-WlCJL9XoMZtLzjnwt635VgLeXSDvMI2dX0keQe-nJi0Iuey=w1043-h782-s-no-gm?authuser=0',
       'https://lh3.googleusercontent.com/pw/AP1GczMv80vADdhm7nxNLfwsEKsEHVLcQCWXu96-igkWrxMy84T1jyyKxMVF5NHPd5r2kHOHCMr25fo0sjhxvY6_jcV5YUBrwS-1jZ9bqtT5khjHv32ACzeRcoAiXvVHzEk4lkFgmnun2nTaZMiyihmk3x_s=w1043-h782-s-no-gm?authuser=0',
-      'https://lh3.googleusercontent.com/pw/AP1GczPyWPjUkhw2RBDENtqLOJWMF-Pcc97xFO6Pnkp-XkdpTCwUznvisuzmgYFm-vAzd28JGvZVUUwg77BRwJOu5SpUGFcsHKiKrILXhmYLKEqs4cvfFWsoP_Ecy5y_D-d6wcQEN1uv2RZPIDUm2YCqKU2_=w1043-h782-s-no-gm?authuser=0',
-      'https://lh3.googleusercontent.com/pw/AP1GczMRAem_a4Xokopn3uTPO8jno-z_OM5ZvuK_UXi7ESF09oOKME-Cz8aoftIsPdiYvNJnI06I8hwZqCdPKjal9EF_y46IFWMtuxeOngSoJTGKxnzT_1ofRAJvZQYKODs-q15h8iqUzhSVhWGc7XIbl7-Y=w1043-h782-s-no-gm?authuser=0',
+      'https://lh3.googleusercontent.com/pw/AP1GczPyWPjUkhw2RBDENtqLOJWMF-Pcc97xFO6Pnkp-XkdpTCwUznvisuzmgYFm-vAzd28JGvZVUUwg77BRwJOu5SpUGFcsHKiKrILXhmYLKEqs4cvfFWsoP_Ecy5y_D-d6wcQEN1uv2RZPIDUm2YCqKU2_=w1035-h776-s-no-gm?authuser=0',
+      'https://lh3.googleusercontent.com/pw/AP1GczMRAem_a4Xokopn3uTPO8jno-z_OM5ZvuK_UXi7ESF09oOKME-Cz8aoftIsPdiYvNJnI06I8hwZqCdPKjal9EF_y46IFWMtuxeOngSoJTGKxnzT_1ofRAJvZQYKODs-q15h8iqUzhSVhWGc7XIbl7-Y=w1035-h776-s-no-gm?authuser=0',
       'https://lh3.googleusercontent.com/pw/AP1GczOg543IW25RJSaz6Ik-waQ3uWjmEoE_UYUsyoTaWHbG0RNO_IzyMzoGytTo7eoZpGaebgAn8nAqsL3BYJfC9WFYNWRcWzDHEJBffot7fPhrI6mAXNTxQncfrD9NUtoUoYBbcrW-4XrcpxyVcz75j9uu=w1239-h782-s-no-gm?authuser=0',
       'https://lh3.googleusercontent.com/pw/AP1GczNYjyY3eQxV9ybcnwIyn9HInWPCMG1-QFP9Gl2_cym5NP1DOkEKBdRBRyuwc6Z22WZ-ur1VgPhSl8FwpMe3PvAN0qC4pdQy9ADwLLjLEqmZkjowSMspYRK7nl9tFLtfTNMNYVaBD1zrI7cf1KzudkNw=w1284-h782-s-no-gm?authuser=0',
       'https://lh3.googleusercontent.com/pw/AP1GczOJG7OF_uV_oJ4tX6HhFJntGXdu25GTaSn4d00WZAjs3-oJVacMoJHB-dl5iB8UCNi1tad18KXUqGo5zmrGiJqs0ODREfbhLs_bncguNTNvIms8jfaZEqUHc35XNkkyJE0-rPy61vnfqjkDy5J48O0W=w1276-h782-s-no-gm?authuser=0'
     ],
-    imageLabels: ['Casca d´Anta', 'Cachoeira da Rosa', 'Cachoeira do Brás', 'Cachoeira da Rosa 2', 'Cachoeira da Gurita', 'Cachoeira da Chinela', 'Cachoeira do Rasga Canga']
+    imageLabels: ['Casca d Anta', 'Cachoeira da Rosa', 'Cachoeira do Brás', 'Cachoeira da Rosa 2', 'Cachoeira da Gurita', 'Cachoeira da Chinela', 'Cachoeira do Rasga Canga']
   },
   {
     id: 'fauna-flora',
@@ -169,7 +175,7 @@ export const AMENITIES: Amenity[] = [
     imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczO_aGIW6GCcWhXV25Xe7od5ej5fOTQAN53dYgufd4vzDSop3Q8iC7d071v7_ckjHc2P54XQ6BVkk_oNEy6NCMOOsrnI-rGQlSEXuKQ2_sFhE5d4_tsp6kcqqR45AziYZc2edlI2G15A4V76NXIHAXVe=w851-h567-s-no-gm?authuser=0',
     imageUrls: [
       'https://lh3.googleusercontent.com/pw/AP1GczO_aGIW6GCcWhXV25Xe7od5ej5fOTQAN53dYgufd4vzDSop3Q8iC7d071v7_ckjHc2P54XQ6BVkk_oNEy6NCMOOsrnI-rGQlSEXuKQ2_sFhE5d4_tsp6kcqqR45AziYZc2edlI2G15A4V76NXIHAXVe=w851-h567-s-no-gm?authuser=0',
-      'https://lh3.googleusercontent.com/pw/AP1GczOKAFcdqbWY4s0Vcu1Zqy78VwhOyaRjsNG_qSx6WRw8gLV5ofVYMAxhTciepYWhr6M5wkhbv5bRyFE30ABPPGzFpt4cB2-Ti-YsScKXaP1Wzr6ReFM_CKZevQURSNXGKaaynDq9_HvGGoimv3mgYe7a=w600-h383-s-no-gm?authuser=0'
+      'https://lh3.googleusercontent.com/pw/AP1GczO14JtilyG_UvsKBKSSW3gNn-j7_kHNPX94rRJXntraRYSS5LRpg-55dI2Ytmd1qMEdm_fWw3V4-j3xyl1hhB-erint5agAU509tUOh4SpA9DmSQbJ4C_5Knp_08PR8hRmH0mVeWKChwdTB9-g12HT1=w1035-h776-s-no-gm?authuser=0'
     ],
     imageLabels: ['Folia de Reis', 'Mirante da Capela'],
     imageMirrored: true

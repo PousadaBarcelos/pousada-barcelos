@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar.tsx';
-import Hero from './components/Hero.tsx';
-import About from './components/About.tsx';
-import Rooms from './components/Rooms.tsx';
-import Amenities from './components/Amenities.tsx';
-import Contact from './components/Contact.tsx';
-import Footer from './components/Footer.tsx';
-import LegalModals from './components/LegalModals.tsx';
-import { translations } from './translations.ts';
-import { CRITICAL_ASSETS } from './constants.ts';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Rooms from './components/Rooms';
+import Amenities from './components/Amenities';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import LegalModals from './components/LegalModals';
+import { translations } from './translations';
+import { CRITICAL_ASSETS } from './constants';
 
 export type Language = 'pt' | 'en' | 'es';
 
@@ -25,7 +25,7 @@ const App: React.FC = () => {
   });
 
   useEffect(() => {
-    // Pré-carregamento de imagens críticas para evitar "pulo" de layout
+    // Preload critical images to avoid layout shift
     CRITICAL_ASSETS.forEach((url) => {
       const img = new Image();
       img.src = url;
@@ -43,7 +43,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-sans selection:bg-nature-200 selection:text-nature-900">
+    <div className="min-h-screen flex flex-col bg-earth-50 text-earth-900 font-sans antialiased">
       <Navbar lang={lang} setLang={setLang} />
       <main className="flex-grow">
         <Hero t={t.hero} />

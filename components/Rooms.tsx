@@ -24,12 +24,18 @@ const HolidayRow: React.FC<{ name: string; date: string }> = ({ name, date }) =>
 
 const Rooms: React.FC<RoomsProps> = ({ t }) => {
   const essencialSuites = ROOMS.filter(r => r.id.startsWith('suite-essencial'));
-  const familiaSuite = ROOMS.find(r => r.id === 'suite-familia');
+  const familiaSuites = ROOMS.filter(r => r.id.startsWith('suite-familia'));
   const [essencialIdx, setEssencialIdx] = useState(0);
+  const [familiaIdx, setFamiliaIdx] = useState(0);
 
   const nextEssencial = () => setEssencialIdx((prev) => (prev + 1) % essencialSuites.length);
   const prevEssencial = () => setEssencialIdx((prev) => (prev - 1 + essencialSuites.length) % essencialSuites.length);
   const currentEssencial = essencialSuites[essencialIdx];
+
+  const nextFamilia = () => setFamiliaIdx((prev) => (prev + 1) % familiaSuites.length);
+  const prevFamilia = () => setFamiliaIdx((prev) => (prev - 1 + familiaSuites.length) % familiaSuites.length);
+  const currentFamilia = familiaSuites[familiaIdx];
+
 
   const handleScrollToPricing = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -113,14 +119,29 @@ const Rooms: React.FC<RoomsProps> = ({ t }) => {
             </div>
           </div>
 
-          {familiaSuite && (
+          {familiaSuites.length > 0 && (
             <div className="group flex flex-col h-full bg-earth-50 rounded-3xl overflow-hidden shadow-md border border-earth-100">
               <div className="relative h-[190px] md:h-[350px] lg:h-[200px] overflow-hidden">
                 <img 
-                  src={familiaSuite.imageUrl} 
+                  key={currentFamilia.imageUrl}
+                  src={currentFamilia.imageUrl} 
                   alt={t.suiteFamilia.name} 
-                  className={`w-full h-full object-cover ${familiaSuite.imageMirrored ? 'scale-x-[-1]' : ''}`} 
+                  className={`w-full h-full object-cover transition-opacity duration-500 ${currentFamilia.imageMirrored ? 'scale-x-[-1]' : ''}`} 
                 />
+                 <button 
+                  onClick={prevFamilia} 
+                  className="absolute inset-y-0 left-4 m-auto h-10 w-10 bg-black/20 hover:bg-white text-white hover:text-nature-900 rounded-full flex items-center justify-center transition-all z-20"
+                  aria-label="Anterior"
+                >
+                  <ChevronLeft />
+                </button>
+                <button 
+                  onClick={nextFamilia} 
+                  className="absolute inset-y-0 right-4 m-auto h-10 w-10 bg-black/20 hover:bg-white text-white hover:text-nature-900 rounded-full flex items-center justify-center transition-all z-20"
+                  aria-label="Próximo"
+                >
+                  <ChevronRight />
+                </button>
                 <div className="absolute top-4 left-4 bg-earth-900 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest z-20">
                   {t.familiaTag}
                 </div>

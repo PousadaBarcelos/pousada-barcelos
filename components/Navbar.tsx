@@ -94,19 +94,11 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang }) => {
             tabIndex={0}
             onKeyDown={(e) => e.key === 'Enter' && handleNavClick(e as any, '#hero')}
           >
-            <div 
-              className={`h-10 w-8 transition-colors duration-300 ${scrolled || isOpen ? 'bg-nature-800' : 'bg-white'}`}
-              style={{
-                maskImage: `url("${LOGO_URL}")`,
-                WebkitMaskImage: `url("${LOGO_URL}")`,
-                maskSize: 'contain',
-                WebkitMaskSize: 'contain',
-                maskRepeat: 'no-repeat',
-                WebkitMaskRepeat: 'no-repeat',
-                maskPosition: 'center',
-                WebkitMaskPosition: 'center'
-              }}
-              aria-hidden="true"
+            <img
+              src={LOGO_URL}
+              alt={`${APP_NAME} logo`}
+              className={`h-5 w-auto transition-all duration-300`}
+              style={{ filter: scrolled || isOpen ? 'brightness(0) invert(0)' : 'brightness(0) invert(1)' }}
             />
             <span className={`font-serif text-xl font-semibold tracking-wider ${scrolled || isOpen ? 'text-earth-900' : 'text-white'}`}>
               {APP_NAME}

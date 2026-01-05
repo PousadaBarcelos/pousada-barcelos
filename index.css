@@ -1,65 +1,76 @@
-:root {
-  /* Design System - Earth Tones */
-  --earth-50: #fdfcfa;
-  --earth-100: #f7f5f0;
-  --earth-200: #e8e2d2;
-  --earth-300: #d5cbb0;
-  --earth-400: #bead8a;
-  --earth-500: #a8926a;
-  --earth-600: #957d59;
-  --earth-700: #735f44;
-  --earth-800: #5e4e3b;
-  --earth-900: #4e4133;
-  --earth-950: #1a1612;
-
-  /* Design System - Nature Tones */
-  --nature-50: #f0fdf4;
-  --nature-100: #dcfce7;
-  --nature-200: #bbf7d0;
-  --nature-500: #22c55e;
-  --nature-800: #166534;
-  --nature-900: #14532d;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    @apply scroll-smooth;
   }
-  
-  body {
-    @apply bg-earth-50 text-earth-900 font-sans antialiased selection:bg-nature-200 selection:text-nature-900;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
   }
 }
 
 @layer components {
-  /* Abstração de Componentes para Produção */
   .btn-primary {
-    @apply px-8 py-4 bg-gray-900/30 hover:bg-gray-900/10 backdrop-blur-md border border-white/10 hover:border-white text-white text-lg font-semibold rounded-xl transition-all duration-300 shadow-lg inline-flex items-center justify-center;
+    @apply inline-block text-center text-white px-6 py-3 rounded-xl font-bold capitalize tracking-wider shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 border;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+    --tw-ring-color: theme('colors.accent.500');
+  }
+
+  .btn-primary:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-color: white;
   }
 
   .btn-secondary {
-    @apply px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white text-lg font-semibold rounded-xl transition-all duration-300 inline-flex items-center justify-center;
-  }
-
-  .card-glass {
-    @apply bg-white/60 backdrop-blur-sm rounded-3xl border border-earth-100 shadow-sm hover:shadow-md transition-shadow;
-  }
-
-  .tag-label {
-    @apply inline-block px-3 py-1 bg-earth-200 text-earth-800 rounded-full text-[10px] font-bold tracking-widest uppercase;
-  }
-}
-
-@layer utilities {
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    @apply inline-block text-center text-white px-6 py-3 rounded-xl font-bold capitalize tracking-wider shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 border;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
+    --tw-ring-color: theme('colors.gray.300');
   }
   
-  .text-balance {
-    text-wrap: balance;
+  .btn-secondary:hover {
+    background-color: white;
+    border-color: white;
+    color: theme('colors.earth.900');
+  }
+
+  /* Animation for hero text */
+  .animation-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .scroll-down-arrow {
+    @apply absolute bottom-8 left-1/2 -translate-x-1/2 z-20;
+    animation: bounce 2s infinite;
+  }
+
+  .scroll-down-arrow a {
+     @apply w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-300;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    40% {
+      transform: translateX(-50%) translateY(-15px);
+    }
+    60% {
+      transform: translateX(-50%) translateY(-5px);
+    }
   }
 }
