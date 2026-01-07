@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ t }) => {
       
       <div className="relative z-10 text-center animation-fade-in-up px-4">
         <div className="inline-block">
-          <h1 className="text-[3.3rem] md:text-[5rem] leading-tight font-serif font-bold [word-spacing:-0.2em]">{t.title}</h1>
+          <h1 className="text-[3.3rem] md:text-[5rem] leading-none md:leading-tight font-serif font-bold [word-spacing:0.0em]">{t.title}</h1>
           <p className="mt-4 text-lg md:text-xl text-balance">{t.description}</p>
         </div>
 

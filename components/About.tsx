@@ -35,7 +35,7 @@ const About: React.FC<AboutProps> = ({ t }) => {
         </div>
 
         {/* Carrossel de Imagens com Fade */}
-        <div className="relative h-64 md:h-80 rounded-2xl shadow-sm w-full overflow-hidden mb-10">
+        <div className="relative h-64 w-full md:w-5/6 md:h-96 lg:w-4/6 lg:h-[500px] mx-auto rounded-2xl shadow-lg overflow-hidden mb-12">
           {ABOUT_GALLERY.map((url, idx) => (
             <img 
               key={idx} 

@@ -25,11 +25,11 @@ export const translations = {
       touchDetails: 'Toque para detalhes',
       items: {
         'parque-nacional': { title: 'Parque Nacional', desc: 'Explore um dos parques mais importantes do Brasil, berço do Rio São Francisco.', long: 'O Parque Nacional da Serra da Canastra protege a nascente do "Velho Chico" e oferece paisagens de tirar o fôlego, trilhas preservadas e mirantes inesquecíveis.' },
-        'cachoeiras': { title: 'Cachoeiras', desc: 'Além da famosa Casca d\'Anta, descubra dezenas de quedas d\'água cristalinas.', long: 'Desde a imponente Casca d\'Anta com seus 186 metros até poços secretos de águas esmeraldas. Opções ideals para banho, fotografia e contemplação.' },
-        'fauna-flora': { title: 'Fauna e Flora', desc: 'Observe o tamanduá-bandeira, el lobo-guará e el pato-mergulhão.', long: 'Um verdadeiro santuário natural. Com sorte e silêncio, é possível avistar o raro pato-mergulhão, o lobo-guará, veados-campeiros, emas, uma flora e uma avifauna de Cerrado únicas.' },
+        'cachoeiras': { title: 'Cachoeiras', desc: 'Além da famosa Casca d\'Anta, descubra dezenas de quedas d\'água cristalinas.', long: 'Desde a imponente Casca d\'Anta com seus 186 metros até poços secretos de águas azuis. Opções ideais para banho, fotografia e contemplação.' },
+        'fauna-flora': { title: 'Fauna e Flora', desc: 'Observe o tamanduá-bandeira, el lobo-guará e el pato-mergulhão.', long: 'Um verdadeiro santuário natural. Com atenção e silêncio, é possível avistar o raro pato-mergulhão, o lobo-guará, veados-campeiros, emas, uma flora e uma avifauna de Cerrado únicas.' },
         'cultura': { title: 'Cultura', desc: 'Conheça a história da região e o modo de vida simples do povo mineiro.', long: 'A hospitalidade mineira em sua essência. Converse com produtores locais, conheça casarões históricos e vivencie a simplicidade acolhedora da roça.' },
         'cheese': { title: 'Queijo Canastra', desc: 'Vivencie a tradição local e prove o autêntico queijo premiado da região.', long: 'Patrimônio Imaterial do Brasil, o Queijo Canastra possui um sabor único devido ao "terroir" da serra. Visite as queijarias premiadas e descubra os segredos da cura.' },
-        'tours': { title: 'Caminhadas e Passeios 4x4', desc: 'Indicação de roteiros para explorar as áreas mais belas da Serra.', long: 'Seja de 4x4 acessando as partes altas e baixas do parque, ou em trilhas a pé, temos as melhores indicações de guias parceiros para sua aventura.' }
+        'tours': { title: 'Caminhadas e Passeios 4x4', desc: 'Uma infinidade de roteiros para explorar as áreas mais belas da Serra.', long: 'Seja em veículos 4x4 ou em trilhas a pé, indicamos os melhores guias credenciados pelo ICMBio para conduzir sua aventura com segurança.' }
       }
     },
     rooms: {
@@ -39,20 +39,20 @@ export const translations = {
       ratesTag: 'Tarifário',
       suiteEssencial: {
         name: 'Suíte Essencial',
-        desc: 'Quarto privativo ideal para até três pessoas que buscam descanso e praticidade. Pode ser configurado com uma cama de casal e uma cama de solteiro, ou três camas de solteiro. Branco ou tijolinho resinado.',
-        features: ['Ar Condicionado', 'Banheiro Privativo', 'Frigobar', 'Televisão', 'Wi-Fi']
+        desc: 'Quarto privativo ideal para até três pessoas que buscam descanso e praticidade. Pode ser configurado com uma cama de casal e uma cama de solteiro, ou três camas de solteiro. Paredes brancas ou em tijolinho resinado.',
+        features: ['Ar Condicionado', 'Banheiro Privativo', 'Frigobar', 'Televisão (sinal aberto)', 'Wi-Fi']
       },
       suiteFamilia: {
         name: 'Suíte Família',
-        desc: 'Nossa acomodação mais ampla. Espaço planejado para acomodar toda a família com máximo conforto, privacidade e liberdade durante sua estadia. Uma cama de casal e até três camas de solteiro.',
-        features: ['Televisão', 'Ar Condicionado', 'Frigobar', 'Banheiro Privativo', 'Wi-Fi']
+        desc: 'Nossa acomodação mais ampla. Espaço generoso para acomodar toda a família, privacidade e liberdade durante sua estadia. Uma cama de casal e até três camas de solteiro.',
+        features: ['Ar Condicionado', 'Banheiro Privativo', 'Frigobar', 'Televisão (sinal aberto)', 'Wi-Fi']
       },
       pricingTitle: 'Informações de tarifário',
       regularRates: 'Diárias Regulares 2026',
       holidaysTitle: 'Feriados Prolongados',
       important: 'Importante:',
       importantDesc: 'Nestes períodos a pousada trabalha com tarifário diferenciado e pacotes específicos. Para reservas em feriados, favor consultar valores via WhatsApp.',
-      checkinOut: 'Check-in: Início às 14h | Check-out: Término às 12h.',
+      checkinOut: 'Check-in: Início às 14h | Check-out: Até às 12h (meio dia).',
       guarantee: 'As reservas são confirmadas mediante depósito de garantia.',
       essencialTag: 'Linha Essencial',
       familiaTag: 'Linha Família',
